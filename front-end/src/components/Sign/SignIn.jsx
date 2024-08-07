@@ -1,11 +1,10 @@
 import React from 'react'
-import './Log.css'
 
-export const Login = () => {
+export const SignIn = () => {
   return (
     <div>
         <form action="" className='log-form'>
-            <h2>LOG IN</h2>
+            <h2>SIGN IN</h2>
             <div className='container'>
               <label htmlFor="username">Email/Username</label>
               <input type="text" className='input-box'/>
@@ -16,7 +15,7 @@ export const Login = () => {
               <input type="text" className='input-box' />
             </div>
 
-            <button className='submit-btn'>Log In</button>
+            <button className='submit-btn'>Sign In</button>
         </form>
     </div>
   )
