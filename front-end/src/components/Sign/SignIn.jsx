@@ -1,9 +1,10 @@
 import React from 'react'
+import './Sign.css'
 
 export const SignIn = () => {
   return (
     <div>
-        <form action="" className='log-form'>
+        <form action="" className='signIn-form'>
             <h2>SIGN IN</h2>
             <div className='container'>
               <label htmlFor="username">Email/Username</label>
