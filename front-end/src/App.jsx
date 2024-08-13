@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import "bootstrap/dist/css/bootstrap.min.css";
 import './App.css'
 import { SignIn } from './components/Sign/SignIn'
 import { Signup } from './components/Sign/Signup'
@@ -13,8 +12,8 @@ function App() {
     <>
     {/* <SignIn/> */}
     {/* <Signup /> */}
-    <Home />
-    {/* <Navbar /> */}
+    {/* <Home /> */}
+    <Navbar />
     </>
   )
 }

@@ -1,5 +1,4 @@
 import React from "react";
-import 'boxicons';
 import './Navbar.css'
 
 export const Navbar = () => {
