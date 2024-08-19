@@ -4,8 +4,8 @@ import * as React from "react";
 import { useState } from "react";
 import "./App.css";
 
-import {Home} from "./Components/Home/Home";
-import { Signup } from "./Components/Sign/Signup";
+// import {Home} from "./Components/Home/Home";
+// import { Signup } from "./Components/Sign/Signup";
 import { Navbar } from "./Components/Navbar/Navbar";
 
 function App() {
