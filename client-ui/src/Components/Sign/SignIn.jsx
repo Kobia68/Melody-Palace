@@ -1,23 +1,26 @@
-import React from 'react'
-import './Sign.css'
+import React from "react";
+import "./Sign.css";
+import { Link } from "react-router-dom";
 
 export const SignIn = () => {
   return (
-    <div>
-        <form action="" className='signIn-form'>
-            <h2>SIGN IN</h2>
-            <div className='container'>
-              <label htmlFor="username">Email/Username</label>
-              <input type="text" className='input-box'/>
-            </div>
-
-            <div>
-              <label htmlFor="password">Password</label>
-              <input type="text" className='input-box' />
-            </div>
-
-            <button className='submit-btn'>Sign In</button>
+    <div className="mt-4 grow flex items-center justify-around">
+      <div className="mb-32">
+        <form action="" className="max-w-sm mx-auto text-center">
+          <h2 className="text-primary font-bold text-2xl">SIGN IN</h2>
+          <input
+            type="email"
+            placeholder="youremail@email.com"
+            className="input-box"
+          />
+          <input type="password" placeholder="password" className="input-box" />
+          <button className="primary">Sign In</button>
+          <div>
+            Don't have an account yet?
+            <Link to={"/signup"}> Sign Up</Link>
+          </div>
         </form>
+      </div>
     </div>
-  )
-}
+  );
+};

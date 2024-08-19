@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 export const Navbar = () => {
   return (
     <div className="">
-      <header className="p-4 flex justify-between">
+      <header className="flex justify-between">
         <a to='/' className="flex items-center gap-1">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -45,7 +45,7 @@ export const Navbar = () => {
           </button>
         </div>
 
-        <div className="flex border border-gray-500 rounded-full py-1 px-2 gap-2">
+        <Link to='/signin' className="flex border border-gray-500 rounded-full py-1 px-2 gap-2">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
@@ -72,7 +72,7 @@ export const Navbar = () => {
               />
             </svg>
           </div>
-        </div>
+        </Link>
       </header>
     </div>
   );
