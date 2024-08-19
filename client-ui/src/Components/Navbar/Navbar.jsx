@@ -4,9 +4,9 @@ import { Link } from "react-router-dom";
 
 export const Navbar = () => {
   return (
-    <div className="">
-      <header className="flex justify-between">
-        <a to='/' className="flex items-center gap-1">
+    <div className=" border-b">
+      <header className="flex justify-around">
+        <a to="/" className="flex items-center gap-1">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
@@ -45,7 +45,24 @@ export const Navbar = () => {
           </button>
         </div>
 
-        <Link to='/signin' className="flex border border-gray-300 rounded-full py-1 px-2 gap-2">
+        <div className="flex gap-3 items-center justify-center">
+          <Link to="/signin" className="signin-btn flex items-center">
+            <button className="border border-gray-300 rounded-full py-1 px-2 gap-2 font-semibold hover:bg-primary transition-colors duration-200 hover:text-white">
+              Sign in
+            </button>
+          </Link>
+          <Link to="/signup" className="signup-btn flex items-center">
+            <button className="border border-gray-300 rounded-full py-1 px-2 gap-2 font-semibold hover:bg-primary transition-colors duration-200 hover:text-white">
+              Sign up
+            </button>
+          </Link>
+        </div>
+
+        {/* This Link and Icons will display only if the user is signin */}
+        {/* <Link
+          to="/signin"
+          className="flex border border-gray-300 rounded-full py-1 px-2 gap-2"
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
@@ -72,8 +89,17 @@ export const Navbar = () => {
               />
             </svg>
           </div>
-        </Link>
+        </Link> */}
       </header>
+      <div className="text-sm flex items-center justify-center gap-3 my-3">
+        <Link className="category">All Categories</Link>
+        <Link className="category">Concerts</Link>
+        <Link className="category">Comedy</Link>
+        <Link className="category">Art</Link>
+        <Link className="category">Product Lauch</Link>
+        <Link className="category">Talet Shows</Link>
+        <Link className="category">Other</Link>
+      </div>
     </div>
   );
 };
