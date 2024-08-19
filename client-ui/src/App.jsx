@@ -8,7 +8,7 @@ import { Route, Routes } from "react-router-dom";
 // import {Home} from "./Components/Home/Home";
 // import { Signup } from "./Components/Sign/Signup";
 import { SignIn } from "./Components/Sign/SignIn";
-import { SignUp } from "./Components/Sign/SignUp"; 
+import { SignUp } from "./Components/Sign/SignUp";
 import { Layout } from "./Components/Layout";
 import { Indexpage } from "./Components/IndexPage/Indexpage";
 
@@ -18,11 +18,11 @@ function App() {
   return (
     <Routes>
       <Route path="/" element={<Layout />}>
-        <Route path="/signin" element={<SignIn />} />
-        <Route path="/signup" element={<SignUp />} />
-
         <Route element={<Indexpage />} />
       </Route>
+
+      <Route path="/signin" element={<SignIn />} />
+      <Route path="/signup" element={<SignUp />} />
     </Routes>
   );
 }

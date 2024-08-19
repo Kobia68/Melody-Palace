@@ -4,8 +4,8 @@ import { Link } from "react-router-dom";
 
 export const SignIn = () => {
   return (
-    <div className="mt-4 grow flex items-center justify-around">
-      <div className="mb-32">
+    <div className="-mt-16 grow flex items-center justify-around min-h-screen">
+      <div className="">
         <form action="" className="max-w-sm mx-auto text-center">
           <h2 className="text-primary font-bold text-2xl">SIGN IN</h2>
           <input
