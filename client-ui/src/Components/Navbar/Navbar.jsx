@@ -22,12 +22,12 @@ export const Navbar = () => {
           <span className="font-bold text-primary">Melody Palace</span>
         </a>
 
-        <div className="flex border border-gray-500 rounded-full py-1 px-2 shadow-md shadow-gray-200">
+        <div className="flex border border-gray-300 rounded-full py-1 px-2 shadow-md shadow-gray-200">
           <input
             type="text"
             name="query"
             placeholder="Search..."
-            className="focus:outline-none text-sm"
+            className="focus:outline-none"
           />
           <button className="bg-primary text-white p-1 rounded-full">
             <svg
@@ -45,7 +45,7 @@ export const Navbar = () => {
           </button>
         </div>
 
-        <Link to='/signin' className="flex border border-gray-500 rounded-full py-1 px-2 gap-2">
+        <Link to='/signin' className="flex border border-gray-300 rounded-full py-1 px-2 gap-2">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"

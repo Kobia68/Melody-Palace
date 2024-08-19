@@ -15,9 +15,9 @@ export const SignIn = () => {
           />
           <input type="password" placeholder="password" className="input-box" />
           <button className="primary">Sign In</button>
-          <div>
+          <div className="py-2 text-gray-500 text-sm">
             Don't have an account yet?
-            <Link to={"/signup"}> Sign Up</Link>
+            <Link to={"/signup"} className="text-blue-600"> Sign Up</Link>
           </div>
         </form>
       </div>

@@ -2,8 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
-input[type=''],input[type='password'], input[type='email'] {
-    @apply w-full border my-2 py-2 px-3 rounded-2xl;
+input[type='password'], input[type='email'] {
+    @apply w-full border border-gray-300 my-2 py-2 px-3 rounded-2xl focus:outline-none text-sm;
+}
+input.input-box {
+    @apply w-full border border-gray-300 my-2 py-2 px-3 rounded-2xl focus:outline-none text-sm;
 }
 
 button.primary {

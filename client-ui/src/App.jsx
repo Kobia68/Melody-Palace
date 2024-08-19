@@ -8,7 +8,7 @@ import { Route, Routes } from "react-router-dom";
 // import {Home} from "./Components/Home/Home";
 // import { Signup } from "./Components/Sign/Signup";
 import { SignIn } from "./Components/Sign/SignIn";
-import { Signup } from "./Components/Sign/Signup"; 
+import { SignUp } from "./Components/Sign/SignUp"; 
 import { Layout } from "./Components/Layout";
 import { Indexpage } from "./Components/IndexPage/Indexpage";
 
@@ -19,7 +19,7 @@ function App() {
     <Routes>
       <Route path="/" element={<Layout />}>
         <Route path="/signin" element={<SignIn />} />
-        <Route path="/signup" element={<Signup />} />
+        <Route path="/signup" element={<SignUp />} />
 
         <Route element={<Indexpage />} />
       </Route>
