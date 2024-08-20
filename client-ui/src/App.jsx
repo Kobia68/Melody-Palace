@@ -8,10 +8,10 @@ import { SignIn } from "./Components/Sign/SignIn";
 import { SignUp } from "./Components/Sign/SignUp";
 import { Layout } from "./Components/Layout";
 import { Indexpage } from "./Components/IndexPage/Indexpage";
-import { UserPage } from "./Components/User/UserPage";
 import { Profile } from "./Components/User/Profile";
 import { MyTickets } from "./Components/User/MyTickets";
 import { MyFavourite } from "./Components/User/MyFavourite";
+import { ProfileLayout } from "./Components/User/ProfileLayout";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -20,7 +20,8 @@ function App() {
     <Routes>
       <Route path="/" element={<Layout />}>
         <Route index element={<Indexpage />} />
-        <Route path="/profile" element={<UserPage />}>
+        <Route path="/profile" element={<ProfileLayout />}>
+          <Route index element={<Profile />} />
           <Route path="mytickets" element={<MyTickets />} />
           <Route path="favourite" element={<MyFavourite />} />
         </Route>
