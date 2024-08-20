@@ -21,7 +21,7 @@ export const Navbar = () => {
           </svg>
           <span className="font-bold text-primary">Melody Palace</span>
         </a>
-
+        {/* Input for the search option */}
         <div className="flex border border-gray-300 rounded-full py-1 px-2 shadow-md shadow-gray-200">
           <input
             type="text"
@@ -29,6 +29,7 @@ export const Navbar = () => {
             placeholder="Search..."
             className="focus:outline-none"
           />
+          {/* Button for the search icon */}
           <button className="bg-primary text-white p-1 rounded-full">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -44,23 +45,24 @@ export const Navbar = () => {
             </svg>
           </button>
         </div>
-
-        <div className="flex gap-3 items-center justify-center">
+        {/* Sign in button */}
+        {/* <div className="flex gap-3 items-center justify-center">
           <Link to="/signin" className="signin-btn flex items-center">
             <button className="border border-gray-300 rounded-full py-1 px-2 gap-2 font-semibold hover:bg-primary transition-colors duration-200 hover:text-white">
               Sign in
             </button>
-          </Link>
-          <Link to="/signup" className="signup-btn flex items-center">
+          </Link> */}
+          {/* Sign up button */}
+          {/* <Link to="/signup" className="signup-btn flex items-center">
             <button className="border border-gray-300 rounded-full py-1 px-2 gap-2 font-semibold hover:bg-primary transition-colors duration-200 hover:text-white">
               Sign up
             </button>
           </Link>
-        </div>
+        </div> */}
 
         {/* This Link and Icons will display only if the user is signin */}
-        {/* <Link
-          to="/signin"
+        <Link
+          to="/profile"
           className="flex border border-gray-300 rounded-full py-1 px-2 gap-2"
         >
           <svg
@@ -89,7 +91,7 @@ export const Navbar = () => {
               />
             </svg>
           </div>
-        </Link> */}
+        </Link>
       </header>
       <div className="text-sm flex items-center justify-center gap-3 my-3">
         <Link className="category">All Categories</Link>
