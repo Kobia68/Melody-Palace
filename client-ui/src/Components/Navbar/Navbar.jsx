@@ -7,6 +7,7 @@ export const Navbar = () => {
     <div className=" border-b">
       <header className="flex justify-around">
         <a to="/" className="flex items-center gap-1">
+        {/* THE LOGO ICON JSX FROM HEROICONS */}
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
@@ -23,6 +24,7 @@ export const Navbar = () => {
         </a>
 
         <div className="flex border border-gray-300 rounded-full py-1 px-2 shadow-md shadow-gray-200">
+          {/* INPUT SEARCH BOX */}
           <input
             type="text"
             name="query"
@@ -30,6 +32,7 @@ export const Navbar = () => {
             className="focus:outline-none"
           />
           <button className="bg-primary text-white p-1 rounded-full">
+            {/* SEARCH ICON FOR THE SEARCH INPUT */}
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
@@ -45,7 +48,8 @@ export const Navbar = () => {
           </button>
         </div>
 
-        <div className="flex gap-3 items-center justify-center">
+{/* SIGN IN AND SIGN UP OPTION LINKS */}
+        {/* <div className="flex gap-3 items-center justify-center">
           <Link to="/signin" className="signin-btn flex items-center">
             <button className="border border-gray-300 rounded-full py-1 px-2 gap-2 font-semibold hover:bg-primary transition-colors duration-200 hover:text-white">
               Sign in
@@ -56,11 +60,11 @@ export const Navbar = () => {
               Sign up
             </button>
           </Link>
-        </div>
+        </div> */}
 
         {/* This Link and Icons will display only if the user is signin */}
-        {/* <Link
-          to="/signin"
+        <Link
+          to="/profile"
           className="flex border border-gray-300 rounded-full py-1 px-2 gap-2"
         >
           <svg
@@ -89,7 +93,7 @@ export const Navbar = () => {
               />
             </svg>
           </div>
-        </Link> */}
+        </Link>
       </header>
       <div className="text-sm flex items-center justify-center gap-3 my-3">
         <Link className="category">All Categories</Link>
