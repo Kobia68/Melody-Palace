@@ -1,12 +1,11 @@
 import React from "react";
-import "./Navbar.css";
 import { Link } from "react-router-dom";
 
 export const Navbar = () => {
   return (
     <div className=" border-b">
       <header className="flex justify-around">
-        <a to="/" className="flex items-center gap-1">
+        <Link to='/' className="flex items-center gap-1">
         {/* THE LOGO ICON JSX FROM HEROICONS */}
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -20,8 +19,7 @@ export const Navbar = () => {
               clipRule="evenodd"
             />
           </svg>
-          <span className="font-bold text-primary">Melody Palace</span>
-        </a>
+          <span className="font-bold text-primary">Melody Palace</span></Link>
 
         <div className="flex border border-gray-300 rounded-full py-1 px-2 shadow-md shadow-gray-200">
           {/* INPUT SEARCH BOX */}
