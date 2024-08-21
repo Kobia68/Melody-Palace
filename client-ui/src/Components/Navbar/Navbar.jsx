@@ -1,12 +1,12 @@
 import React from "react";
-import "./Navbar.css";
 import { Link } from "react-router-dom";
 
 export const Navbar = () => {
   return (
     <div className=" border-b">
       <header className="flex justify-around">
-        <a to="/" className="flex items-center gap-1">
+        <Link to="/" className="flex items-center gap-1">
+          {/* THE LOGO ICON JSX FROM HEROICONS */}
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
@@ -20,9 +20,10 @@ export const Navbar = () => {
             />
           </svg>
           <span className="font-bold text-primary">Melody Palace</span>
-        </a>
-        {/* Input for the search option */}
+        </Link>
+
         <div className="flex border border-gray-300 rounded-full py-1 px-2 shadow-md shadow-gray-200">
+          {/* INPUT SEARCH BOX */}
           <input
             type="text"
             name="query"
@@ -31,6 +32,7 @@ export const Navbar = () => {
           />
           {/* Button for the search icon */}
           <button className="bg-primary text-white p-1 rounded-full">
+            {/* SEARCH ICON FOR THE SEARCH INPUT */}
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
@@ -45,15 +47,16 @@ export const Navbar = () => {
             </svg>
           </button>
         </div>
-        {/* Sign in button */}
+
+        {/* SIGN IN AND SIGN UP OPTION LINKS */}
         {/* <div className="flex gap-3 items-center justify-center">
           <Link to="/signin" className="signin-btn flex items-center">
             <button className="border border-gray-300 rounded-full py-1 px-2 gap-2 font-semibold hover:bg-primary transition-colors duration-200 hover:text-white">
               Sign in
             </button>
           </Link> */}
-          {/* Sign up button */}
-          {/* <Link to="/signup" className="signup-btn flex items-center">
+        {/* Sign up button */}
+        {/* <Link to="/signup" className="signup-btn flex items-center">
             <button className="border border-gray-300 rounded-full py-1 px-2 gap-2 font-semibold hover:bg-primary transition-colors duration-200 hover:text-white">
               Sign up
             </button>
