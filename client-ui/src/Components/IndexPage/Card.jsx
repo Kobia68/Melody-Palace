@@ -5,7 +5,7 @@ import LikeButton from "../User/LikeButton";
 
 const Card = ({ title, category, artist, date, image }) => {
   return (
-    <Link to='/eventdetails' className="bg-white border border-gray-200 rounded-lg shadow-md overflow-hidden">
+    <div className="bg-white border border-gray-200 rounded-lg shadow-md overflow-hidden">
       {image && (
         <img className="w-full h-48 object-cover" src={image} alt={title} />
       )}
@@ -41,7 +41,7 @@ const Card = ({ title, category, artist, date, image }) => {
           <LikeButton />
         </div>
       </div>
-    </Link>
+    </div>
   );
 };
 

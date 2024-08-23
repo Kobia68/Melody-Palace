@@ -13,7 +13,7 @@ const LikeButton = () => {
   return (
     <button
       onClick={handleClick}
-      className="flex items-center justify-center p-2"
+      className="flex items-center justify-center p-2 focus:outline-none focus:ring-0 focus:ring-offset-0"
     >
       {liked ? (
         <svg

@@ -8,13 +8,16 @@ export const Navbar = () => {
       style={{ boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)" }}
     >
       <header className="flex justify-around">
-        <Link to="/" className="flex items-center gap-1">
+        <Link
+          to="/"
+          className="flex items-center gap-1 focus:outline-none focus:ring-0 focus:ring-offset-0"
+        >
           {/* THE LOGO ICON JSX FROM HEROICONS */}
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
             fill="currentColor"
-            className="size-6 text-primary"
+            className="size-8 text-primary"
           >
             <path
               fillRule="evenodd"
@@ -34,7 +37,7 @@ export const Navbar = () => {
             className="focus:outline-none"
           />
           {/* Button for the search icon */}
-          <button className="bg-primary text-white p-1 rounded-full">
+          <button className="bg-primary text-white p-1 rounded-full focus:outline-none focus:ring-0 focus:ring-offset-0">
             {/* SEARCH ICON FOR THE SEARCH INPUT */}
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -70,7 +73,7 @@ export const Navbar = () => {
         <Link
           // to="/profile"
           to="/adminprofile"
-          className="flex border border-gray-300 rounded-full py-1 px-2 gap-2"
+          className="flex border border-gray-300 rounded-full py-1 px-2 gap-2 focus:outline-none focus:ring-0 focus:ring-offset-0"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
