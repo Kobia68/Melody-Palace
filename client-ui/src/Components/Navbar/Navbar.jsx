@@ -3,7 +3,10 @@ import { Link } from "react-router-dom";
 
 export const Navbar = () => {
   return (
-    <div className=" border-b">
+    <div
+      className=" border-b fixed top-0 left-0 right-0 pt-4 bg-white"
+      style={{ boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)" }}
+    >
       <header className="flex justify-around">
         <Link to="/" className="flex items-center gap-1">
           {/* THE LOGO ICON JSX FROM HEROICONS */}

@@ -4,7 +4,7 @@ import { Outlet } from 'react-router-dom'
 
 export const Indexpage = () => {
   return (
-    <div>
+    <div className='mt-20 pt-2'>
       <CardList />
       <Outlet />
     </div>
