@@ -65,7 +65,8 @@ export const Navbar = () => {
 
         {/* This Link and Icons will display only if the user is signin */}
         <Link
-          to="/profile"
+          // to="/profile"
+          to="/adminprofile"
           className="flex border border-gray-300 rounded-full py-1 px-2 gap-2"
         >
           <svg

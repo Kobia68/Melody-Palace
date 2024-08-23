@@ -13,6 +13,9 @@ import { MyTickets } from "./Components/User/MyTickets";
 import { MyFavourite } from "./Components/User/MyFavourite";
 import { ProfileLayout } from "./Components/User/ProfileLayout";
 import { EventDetails } from "./Components/IndexPage/EventDetails";
+import { AdminProfileLayout } from "./Components/AdminPages/AdminProfileLayout";
+import { NewEvent } from "./Components/AdminPages/NewEvent";
+import { Finances } from "./Components/AdminPages/Finances";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -22,6 +25,10 @@ function App() {
       <Route path="/" element={<Layout />}>
         <Route index element={<Indexpage />} />
         <Route path="/eventdetails" element={<EventDetails />} />
+        <Route path="/adminprofile" element={<AdminProfileLayout />}>
+          <Route path="newevent" element={<NewEvent />}/>
+          <Route path="finances" element={<Finances />}/>
+        </Route>
         <Route path="/profile" element={<ProfileLayout />}>
           <Route index element={<Profile />} />
           <Route path="mytickets" element={<MyTickets />} />
