@@ -1,6 +1,7 @@
 // src/components/Card.js
 import React from "react";
 import { Link } from "react-router-dom";
+import LikeButton from "../User/LikeButton";
 
 const Card = ({ title, category, artist, date, image }) => {
   return (
@@ -14,10 +15,14 @@ const Card = ({ title, category, artist, date, image }) => {
           <span className="text-black">Host: </span>
           {artist}
         </p>
-        <p className="text-sm">{date}</p>
+        <div className="flex justify-between items-center mt-2">
+          <p className="text-sm">{date}</p>
+          <p className="text-sm text-gray-500">{category}</p>
+        </div>
         <div className="flex justify-between items-center mt-2">
           <div className="inline-block">
-            <Link className="flex items-center gap-1 bg-primary text-white text-sm py-1 px-2 rounded-full w-auto">
+            {/* ICON ON THE BUY TICKET LINK */}
+            <Link to='/eventdetails' className="flex items-center gap-1 bg-primary text-white text-sm py-1 px-2 rounded-full w-auto">
               Buy Ticket
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -33,7 +38,7 @@ const Card = ({ title, category, artist, date, image }) => {
               </svg>
             </Link>
           </div>
-          <p className="text-sm text-gray-500">{category}</p>
+          <LikeButton />
         </div>
       </div>
     </div>

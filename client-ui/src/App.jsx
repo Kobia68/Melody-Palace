@@ -12,6 +12,7 @@ import { Profile } from "./Components/User/Profile";
 import { MyTickets } from "./Components/User/MyTickets";
 import { MyFavourite } from "./Components/User/MyFavourite";
 import { ProfileLayout } from "./Components/User/ProfileLayout";
+import { EventDetails } from "./Components/IndexPage/EventDetails";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -20,6 +21,7 @@ function App() {
     <Routes>
       <Route path="/" element={<Layout />}>
         <Route index element={<Indexpage />} />
+        <Route path="/eventdetails" element={<EventDetails />} />
         <Route path="/profile" element={<ProfileLayout />}>
           <Route index element={<Profile />} />
           <Route path="mytickets" element={<MyTickets />} />
