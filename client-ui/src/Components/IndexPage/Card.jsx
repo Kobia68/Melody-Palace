@@ -4,6 +4,13 @@ import { Link } from "react-router-dom";
 import LikeButton from "../User/LikeButton";
 
 const Card = ({ title, category, artist, date, image }) => {
+    const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth", // This adds a smooth scrolling effect
+    });
+  };
+  
   return (
     <div className="bg-white border border-gray-200 rounded-lg shadow-md overflow-hidden">
       {image && (
@@ -22,7 +29,7 @@ const Card = ({ title, category, artist, date, image }) => {
         <div className="flex justify-between items-center mt-2">
           <div className="inline-block">
             {/* ICON ON THE BUY TICKET LINK */}
-            <Link to='/eventdetails' className="flex items-center gap-1 bg-primary text-white text-sm py-1 px-2 rounded-full w-auto">
+            <Link to='/eventdetails' onClick={scrollToTop} className="flex items-center gap-1 bg-primary text-white text-sm py-1 px-2 rounded-full w-auto">
               Buy Ticket
               <svg
                 xmlns="http://www.w3.org/2000/svg"

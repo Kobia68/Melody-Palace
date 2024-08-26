@@ -16,13 +16,3 @@ button.primary {
 .category {
     @apply border border-gray-300 rounded-full text-gray-500 px-4 py-1;
 }
-
-/* styles.css */
-/* 
-button {
-    @apply py-2 px-4 rounded-md shadow-sm hover:bg-opacity-80 focus:outline-none focus:ring-1 focus:ring-offset-1 focus:ring-primary;
-} */
-
-a {
-    @apply text-primary hover:bg-opacity-80 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary;
-}

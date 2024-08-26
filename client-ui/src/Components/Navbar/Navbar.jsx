@@ -9,6 +9,7 @@ export const Navbar = () => {
     >
       <header className="flex justify-around">
         <Link
+          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
           to="/"
           className="flex items-center gap-1 focus:outline-none focus:ring-0 focus:ring-offset-0"
         >
@@ -74,6 +75,7 @@ export const Navbar = () => {
           // to="/profile"
           to="/adminprofile"
           className="flex border border-gray-300 rounded-full py-1 px-2 gap-2 focus:outline-none focus:ring-0 focus:ring-offset-0"
+          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -104,13 +106,48 @@ export const Navbar = () => {
         </Link>
       </header>
       <div className="text-sm flex items-center justify-center gap-3 my-3">
-        <Link className="category">All Categories</Link>
-        <Link className="category">Concerts</Link>
-        <Link className="category">Comedy</Link>
-        <Link className="category">Art</Link>
-        <Link className="category">Product Lauch</Link>
-        <Link className="category">Talet Shows</Link>
-        <Link className="category">Other</Link>
+        <Link
+          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+          className="category"
+        >
+          All Categories
+        </Link>
+        <Link
+          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+          className="category"
+        >
+          Concerts
+        </Link>
+        <Link
+          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+          className="category"
+        >
+          Comedy
+        </Link>
+        <Link
+          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+          className="category"
+        >
+          Art
+        </Link>
+        <Link
+          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+          className="category"
+        >
+          Product Lauch
+        </Link>
+        <Link
+          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+          className="category"
+        >
+          Talet Shows
+        </Link>
+        <Link
+          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+          className="category"
+        >
+          Other
+        </Link>
       </div>
     </div>
   );
