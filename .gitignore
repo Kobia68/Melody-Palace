@@ -1,0 +1,11 @@
+# General Ignored Files
+node_modules/
+.env
+
+# React App (client UI) Specific
+client-ui/build/
+client-ui/.eslintcache
+
+# Node.js App (API) Specific
+API/logs/
+API/coverage/

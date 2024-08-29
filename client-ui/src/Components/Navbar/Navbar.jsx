@@ -56,24 +56,24 @@ export const Navbar = () => {
         </div>
 
         {/* SIGN IN AND SIGN UP OPTION LINKS */}
-        {/* <div className="flex gap-3 items-center justify-center">
+        <div className="flex gap-3 items-center justify-center">
           <Link to="/signin" className="signin-btn flex items-center">
             <button className="border border-gray-300 rounded-full py-1 px-2 gap-2 font-semibold hover:bg-primary transition-colors duration-200 hover:text-white">
               Sign in
             </button>
-          </Link> */}
+          </Link>
         {/* Sign up button */}
-        {/* <Link to="/signup" className="signup-btn flex items-center">
+        <Link to="/signup" className="signup-btn flex items-center">
             <button className="border border-gray-300 rounded-full py-1 px-2 gap-2 font-semibold hover:bg-primary transition-colors duration-200 hover:text-white">
               Sign up
             </button>
           </Link>
-        </div> */}
+        </div>
 
         {/* This Link and Icons will display only if the user is signin */}
         <Link
-          // to="/profile"
-          to="/adminprofile"
+          to="/profile"
+          // to="/adminprofile"
           className="flex border border-gray-300 rounded-full py-1 px-2 gap-2 focus:outline-none focus:ring-0 focus:ring-offset-0"
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
         >
