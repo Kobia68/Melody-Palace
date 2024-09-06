@@ -18,21 +18,20 @@ export const SignUp = () => {
     });
   };
 
-  const handleSubmit = async e =>{
+  const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post("/api/signup", user);
-      console.log(res)      
+      const res = axios.post("http://localhost:5000/signup", user); 
+      console.log(res);
     } catch (err) {
-      console.log(err)
+      console.log(err);
     }
-  }
+  };
 
-  console.log(user)
   return (
     <div className="-mt-8 grow flex items-center justify-around min-h-screen">
       <div className="">
-        <form action="" className="max-w-sm mx-auto text-center">
+        <form onSubmit={handleSubmit} className="max-w-sm mx-auto text-center">
           <h2 className="text-primary font-bold text-2xl">SIGN UP</h2>
           <input
             type="text"
@@ -59,11 +58,11 @@ export const SignUp = () => {
             className="input-box"
           />
           <input
-            type="number"
+            type="text" // Changed from number to text
             name="phoneNo"
             onChange={handleChange}
             value={user.phoneNo}
-            placeholder="phonenumber"
+            placeholder="Phone number"
             className="input-box"
           />
           <input
@@ -71,14 +70,15 @@ export const SignUp = () => {
             name="password"
             onChange={handleChange}
             value={user.password}
-            placeholder="password"
+            placeholder="Password"
             className="input-box"
           />
-          <button className="primary" onSubmit={handleSubmit}>Sign Up</button>
+          <button type="submit" className="primary">
+            Sign Up
+          </button>
           <div className="py-2 text-gray-500 text-sm">
             Already have an account?
             <Link to={"/signin"} className="text-blue-600">
-              {" "}
               Sign In
             </Link>
           </div>

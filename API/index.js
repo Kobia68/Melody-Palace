@@ -1,14 +1,17 @@
 import express from 'express';
-import { signUp } from './controllers/authController.js';
+import cors from "cors";
+
 import router from './routes/authRoutes.js';
 
 
+
 const app = express();
+app.use(cors());
 app.use(express.json());
 
-app.use('/api', router);
+app.use(router);
 
-router.post("/signup", signUp)
+
 
 app.get("/test", (req, res)=> {
     res.send("rest")
