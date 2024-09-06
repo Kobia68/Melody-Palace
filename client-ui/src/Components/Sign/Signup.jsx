@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import axios from "axios";
 
 export const SignUp = () => {
   const [user, setUser] = useState({
@@ -16,6 +17,18 @@ export const SignUp = () => {
       return { ...prev, [name]: value };
     });
   };
+
+  const handleSubmit = async e =>{
+    e.preventDefault();
+    try {
+      const res = await axios.post("/api/signup", user);
+      console.log(res)      
+    } catch (err) {
+      console.log(err)
+    }
+  }
+
+  console.log(user)
   return (
     <div className="-mt-8 grow flex items-center justify-around min-h-screen">
       <div className="">
@@ -61,7 +74,7 @@ export const SignUp = () => {
             placeholder="password"
             className="input-box"
           />
-          <button className="primary">Sign Up</button>
+          <button className="primary" onSubmit={handleSubmit}>Sign Up</button>
           <div className="py-2 text-gray-500 text-sm">
             Already have an account?
             <Link to={"/signin"} className="text-blue-600">
