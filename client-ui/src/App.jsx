@@ -5,7 +5,7 @@ import { Route, Routes } from "react-router-dom";
 
 // Component imports
 import { SignIn } from "./Components/Sign/SignIn";
-import { SignUp } from "./Components/Sign/SignUp";
+import { SignUp } from "./Components/Sign/Signup";
 import { Layout } from "./Components/Layout";
 import { Indexpage } from "./Components/IndexPage/Indexpage";
 import { Profile } from "./Components/User/Profile";
