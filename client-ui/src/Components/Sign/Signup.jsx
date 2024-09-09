@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 
 export const SignUp = () => {
@@ -11,6 +11,10 @@ export const SignUp = () => {
     password: "",
   });
 
+  const navigate = useNavigate();
+  
+  const [err, setError] = useState(null);
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setUser((prev) => {
@@ -18,13 +22,14 @@ export const SignUp = () => {
     });
   };
 
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = axios.post("http://localhost:5000/signup", user); 
-      console.log(res);
+      await axios.post("http://localhost:5000/signup", user);
+      navigate("/signin")
     } catch (err) {
-      console.log(err);
+      setError(err.response.data);
     }
   };
 
@@ -34,6 +39,7 @@ export const SignUp = () => {
         <form onSubmit={handleSubmit} className="max-w-sm mx-auto text-center">
           <h2 className="text-primary font-bold text-2xl">SIGN UP</h2>
           <input
+            required
             type="text"
             onChange={handleChange}
             value={user.fullname}
@@ -42,6 +48,7 @@ export const SignUp = () => {
             className="input-box"
           />
           <input
+            required
             type="email"
             name="email"
             onChange={handleChange}
@@ -50,6 +57,7 @@ export const SignUp = () => {
             className="input-box"
           />
           <input
+            required
             type="text"
             placeholder="username"
             onChange={handleChange}
@@ -66,6 +74,7 @@ export const SignUp = () => {
             className="input-box"
           />
           <input
+            required
             type="password"
             name="password"
             onChange={handleChange}
@@ -73,6 +82,7 @@ export const SignUp = () => {
             placeholder="Password"
             className="input-box"
           />
+          {err && <p className="text-red-600 py-3 underline">{err}</p>}
           <button type="submit" className="primary">
             Sign Up
           </button>
