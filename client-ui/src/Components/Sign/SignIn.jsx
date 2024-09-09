@@ -1,6 +1,7 @@
 import axios from "axios";
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import { AuthContext } from "../../context/authContext";
 
 export const SignIn = () => {
   const [user, setUser] = useState({
@@ -9,6 +10,8 @@ export const SignIn = () => {
   });
 
   const navigate = useNavigate();
+
+  const {signin} = useContext(AuthContext)
 
   const [err, setError] = useState(null);
 
@@ -22,7 +25,7 @@ export const SignIn = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("http://localhost:5000/auth/signin", user);
+      await signin(user)
       navigate("/");
     } catch (err) {
       setError(err.response.data);
