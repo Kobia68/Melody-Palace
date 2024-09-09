@@ -26,7 +26,7 @@ export const SignUp = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("http://localhost:5000/signup", user);
+      await axios.post("http://localhost:5000/auth/signup", user);
       navigate("/signin")
     } catch (err) {
       setError(err.response.data);

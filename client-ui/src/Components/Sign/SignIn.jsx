@@ -4,7 +4,6 @@ import { Link, useNavigate } from "react-router-dom";
 
 export const SignIn = () => {
   const [user, setUser] = useState({
-    email: "",
     username: "",
     password: "",
   });
@@ -23,7 +22,7 @@ export const SignIn = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("http://localhost:5000/signin", user);
+      await axios.post("http://localhost:5000/auth/signin", user);
       navigate("/");
     } catch (err) {
       setError(err.response.data);
@@ -40,20 +39,22 @@ export const SignIn = () => {
         >
           <h2 className="text-primary font-bold text-2xl">SIGN IN</h2>
           <input
-            name="email"
+            name="username"
             onChange={handleChange}
-            type="email"
-            placeholder="email"
+            value={user.username}
+            type="text"
+            placeholder="username"
             className="input-box"
           />
           <input
             type="password"
+            value={user.password}
             name="password"
             onChange={handleChange}
             placeholder="password"
             className="input-box"
           />
-          {err && <p className="text-red-600 py-3">{ err }</p>}
+          {err && <p className="text-red-600 py-3 underline text-sm">{ err }</p>}
           <button className="primary">Sign In</button>
           <div className="py-2 text-gray-500 text-sm">
             Don't have an account yet?
