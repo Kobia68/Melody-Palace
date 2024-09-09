@@ -1,6 +1,7 @@
 import axios from "axios";
 import { createContext, useEffect, useState } from "react";
 
+// create context to facilitate sharing of user data between components
 export const AuthContext = createContext();
 
 export const AuthContextProvider = ({children})=> {
@@ -14,7 +15,7 @@ export const AuthContextProvider = ({children})=> {
     }
 
     const signout = async (user) => {
-        await axios.post("auth/signout", user);
+        await axios.post("http://localhost:5000/auth/signout");
         setCurrentUser(null)
     }
 

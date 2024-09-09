@@ -1,7 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
+import {AuthContext } from "../../context/authContext";
 
 export const Navbar = () => {
+  const { currentUser, signout } = useContext(AuthContext);
+
   return (
     <div
       className=" border-b fixed top-0 left-0 right-0 pt-4 bg-white"
@@ -56,19 +59,27 @@ export const Navbar = () => {
         </div>
 
         {/* SIGN IN AND SIGN UP OPTION LINKS */}
-        <div className="flex gap-3 items-center justify-center">
-          <Link to="/signin" className="signin-btn flex items-center">
+        {currentUser ? (
+          <Link onClick={signout} className="signin-btn flex items-center">
             <button className="border border-gray-300 rounded-full py-1 px-2 gap-2 font-semibold hover:bg-primary transition-colors duration-200 hover:text-white">
-              Sign in
+              Sign out
             </button>
           </Link>
-        {/* Sign up button */}
-        <Link to="/signup" className="signup-btn flex items-center">
-            <button className="border border-gray-300 rounded-full py-1 px-2 gap-2 font-semibold hover:bg-primary transition-colors duration-200 hover:text-white">
-              Sign up
-            </button>
-          </Link>
-        </div>
+        ) : (
+          <div className="flex gap-3 items-center justify-center">
+            <Link to="/signin" className="signin-btn flex items-center">
+              <button className="border border-gray-300 rounded-full py-1 px-2 gap-2 font-semibold hover:bg-primary transition-colors duration-200 hover:text-white">
+                Sign in
+              </button>
+            </Link>
+
+            <Link to="/signup" className="signup-btn flex items-center">
+              <button className="border border-gray-300 rounded-full py-1 px-2 gap-2 font-semibold hover:bg-primary transition-colors duration-200 hover:text-white">
+                Sign up
+              </button>
+            </Link>
+          </div>
+        )}
 
         {/* This Link and Icons will display only if the user is signin */}
         <Link
