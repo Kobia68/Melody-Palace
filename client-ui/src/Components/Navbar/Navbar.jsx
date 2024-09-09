@@ -1,9 +1,25 @@
 import React, { useContext } from "react";
-import { Link } from "react-router-dom";
-import {AuthContext } from "../../context/authContext";
+import { Link, useNavigate } from "react-router-dom";
+import { AuthContext } from "../../context/authContext";
 
 export const Navbar = () => {
   const { currentUser, signout } = useContext(AuthContext);
+  const navigate = useNavigate();
+
+  // Retrieve user data from local storage
+  const user = JSON.parse(localStorage.getItem("user"));
+
+  // Redirect based on user role
+  const checkRole = () => {
+    if (user) {
+      const path = user.role === "admin" ? "/adminprofile" : "/profile";
+      navigate(path);
+      console.log(role);
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    } else {
+      const path = user.role === "user" ? "/adminprofile" : "/profile";
+      navigate(path);    }
+  };
 
   return (
     <div
@@ -60,7 +76,7 @@ export const Navbar = () => {
 
         {/* SIGN IN AND SIGN UP OPTION LINKS */}
         {currentUser ? (
-          <Link onClick={signout} className="signin-btn flex items-center">
+          <Link onClick={signout} to='/' className="signin-btn flex items-center">
             <button className="border border-gray-300 rounded-full py-1 px-2 gap-2 font-semibold hover:bg-primary transition-colors duration-200 hover:text-white">
               Sign out
             </button>
@@ -83,10 +99,11 @@ export const Navbar = () => {
 
         {/* This Link and Icons will display only if the user is signin */}
         <Link
-          to="/profile"
-          // to="/adminprofile"
           className="flex border border-gray-300 rounded-full py-1 px-2 gap-2 focus:outline-none focus:ring-0 focus:ring-offset-0"
-          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+          onClick={() => {
+            checkRole();
+            window.scrollTo({ top: 0, behavior: "smooth" });
+          }}
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
