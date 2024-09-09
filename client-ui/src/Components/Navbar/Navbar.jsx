@@ -124,36 +124,42 @@ export const Navbar = () => {
           All Categories
         </Link>
         <Link
+          to="/?cat=concert"
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
           className="category"
         >
           Concerts
         </Link>
         <Link
+          to="/?cat=comedy"
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
           className="category"
         >
           Comedy
         </Link>
         <Link
+          to="/?cat=art"
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
           className="category"
         >
           Art
         </Link>
         <Link
+          to="/?cat=productlaunch"
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
           className="category"
         >
-          Product Lauch
+          Product Launch
         </Link>
         <Link
+          to="/?cat=talentshow"
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
           className="category"
         >
-          Talet Shows
+          Talent Shows
         </Link>
         <Link
+          to="/?cat=other"
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
           className="category"
         >
