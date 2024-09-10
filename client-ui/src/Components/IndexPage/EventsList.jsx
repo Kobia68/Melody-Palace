@@ -16,7 +16,7 @@ const EventsList = () => {
         const res = await axios.get(`http://localhost:5000/events${cat}`);
         setEvents(res.data);
       } catch (error) {
-        res.json(errr);
+        res.json(error);
       }
     };
     fetchData();

@@ -12,7 +12,7 @@ router.post("/auth/signout", signOut)
 
 // Appcontroller routes
 router.get("/events", getEvents)
-router.get("/post:id", getEventDetails)
+router.get("/event/:id", getEventDetails)
 
 // Admin routes
 router.post("/admin/profile/newpost", addNewPost)
