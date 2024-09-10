@@ -10,5 +10,10 @@ export const getEvents = (req, res) => {
 }
 
 export const getEventDetails = (req, res) => {
+    const q = "SELECT * FROM events WHERE event_id = ?";
 
+    db.query(q, [req.params.id], (err, data) => {
+        if (err) return res.json(err)
+            return res.json(data[0])
+    })
 }
