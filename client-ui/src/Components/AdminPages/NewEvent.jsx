@@ -42,21 +42,12 @@ export const NewEvent = () => {
       const imgurl =await upload();
 
       await axios.post("http://localhost:5000/admin/profile/newpost", {
-        cat: "",
-        eventName: "",
-        eventDescription: "",
-        hostName: "",
-        eventDate: "",
-        eventTime: "",
+        ...eventData,
         img: imgurl,
-        regularTicket: "",
-        vipTicket: "",
-        vvipTicket: "",
       });
-      console.log("Event published")
     } catch (error) {
-      console.log(error.response.data);
       console.log("Publish failed");
+      console.log(error.response.data);
     }
   };
 
