@@ -1,6 +1,7 @@
 import React from "react";
 
 export const EventDetails = () => {
+  
   return (
     <div className="w-2/3 mx-auto mt-24 shadow-[0_4px_10px_rgba(0,0,0,0.45)] p-3 rounded-md">
       <div className="flex justify-between">

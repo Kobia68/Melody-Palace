@@ -9,19 +9,6 @@ export const getEvents = (req, res) => {
     })
 }
 
-// export const getEvents =(req, res) => {
-//   const query = 'SELECT * FROM events';
-
-//   db.query(query, (err, results) => {
-//     if (err) {
-//       console.error('Error executing query:', err);
-//       return res.status(500).json({ error: 'Database error' });
-//     }
-
-//     res.json(results); // Return all events as a JSON response
-//   });
-// };
-
 export const getEventDetails = (req, res) => {
 
 }

@@ -24,7 +24,7 @@ function App() {
     <Routes>
       <Route path="/" element={<Layout />}>
         <Route index element={<Indexpage />} />
-        <Route path="/eventdetails" element={<EventDetails />} />
+        <Route path="/eventdetails/:id" element={<EventDetails />} />
         <Route path="/adminprofile" element={<AdminProfileLayout />}>
           <Route index element={<NewEvent />}/>
           <Route path="finances" element={<Finances />}/>
