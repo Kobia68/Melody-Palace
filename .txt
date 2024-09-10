@@ -1,0 +1,13 @@
+  // const [events, setEvents] = useState([]);
+
+  // useEffect(() => {
+  //   const fetchData = async () => {
+  //     try {
+  //       const res = await axios.get("http://localhost:5000/events");
+  //       setEvents(res.data);
+  //     } catch (error) {
+  //       console.log(error)        
+  //     }
+  //   };
+  //   fetchData();
+  // })

@@ -13,9 +13,9 @@ const Card = ({ title, category, artist, date, image }) => {
   
   return (
     <div className="bg-white border border-gray-200 rounded-lg shadow-md overflow-hidden">
-      {image && (
+      {/* {image && (
         <img className="w-full h-48 object-cover" src={image} alt={title} />
-      )}
+      )} */}
       <div className="p-4">
         <p className="text-md font-bold">{title}</p>
         <p className="font-medium text-primary">

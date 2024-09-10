@@ -1,12 +1,12 @@
 import React from 'react'
-import CardList from './CardList'
+import EventsList from "./EventsList";
 import { Outlet } from 'react-router-dom'
 
 export const Indexpage = () => {
   return (
-    <div className='mt-20 pt-2'>
-      <CardList />
+    <div className="mt-20 pt-2">
+      <EventsList />
       <Outlet />
     </div>
-  )
+  );
 }
