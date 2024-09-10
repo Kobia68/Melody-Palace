@@ -58,10 +58,7 @@ export const NewEvent = () => {
       <h2 className="text-2xl font-bold mb-4">Add New Event</h2>
       <form onSubmit={handleSubmit} className="space-y-4">
         <div>
-          <label
-            htmlFor="eventType"
-            className="block text-xs font-medium text-gray-700"
-          >
+          <label className="block text-xs font-medium text-gray-700">
             Event Type
           </label>
           <select
@@ -71,20 +68,17 @@ export const NewEvent = () => {
             className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm focus:border-primary focus:ring-primary sm:text-sm"
           >
             <option value="">Select an event type</option>
-            <option value="conference">Concert</option>
-            <option value="webinar">Comedy</option>
-            <option value="webinar">Talent Shows</option>
-            <option value="workshop">Art</option>
-            <option value="webinar">Product Launch</option>
-            <option value="webinar">Other</option>
+            <option value="concert">Concert</option>
+            <option value="comedy">Comedy</option>
+            <option value="talent show">Talent Shows</option>
+            <option value="art">Art</option>
+            <option value="product launch">Product Launch</option>
+            <option value="other">Other</option>
           </select>
         </div>
 
         <div>
-          <label
-            htmlFor="eventName"
-            className="block text-xs font-medium text-gray-700"
-          >
+          <label className="block text-xs font-medium text-gray-700">
             Event Name
           </label>
           <input
@@ -128,7 +122,7 @@ export const NewEvent = () => {
           />
         </div>
 
-         <div>
+        <div>
           <label
             htmlFor="eventDate"
             className="block text-xs font-medium text-gray-700"
@@ -176,7 +170,7 @@ export const NewEvent = () => {
             onChange={(e) => setImg(e.target.files[0])}
             className="mt-1 pl-2 py-1 block w-full border border-gray-300 rounded-md shadow-sm focus:border-primary focus:ring-primary sm:text-sm"
           />
-        </div>        
+        </div>
 
         <div>
           <label

@@ -168,14 +168,14 @@ export const Navbar = () => {
           Art
         </Link>
         <Link
-          to="/?cat=productlaunch"
+          to="/?cat=product launch"
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
           className="category"
         >
           Product Launch
         </Link>
         <Link
-          to="/?cat=talentshow"
+          to="/?cat=talent show"
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
           className="category"
         >

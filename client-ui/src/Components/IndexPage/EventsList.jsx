@@ -56,7 +56,7 @@ const EventsList = () => {
                   {event.hostName}
                 </p>
                 <div className="flex justify-between items-center mt-2">
-                  <p className="text-sm">{event.date}</p>
+                  <p className="text-sm">{event.eventDate}</p>
                   <p className="text-sm text-gray-500">{event.cat}</p>
                 </div>
                 <div className="flex justify-between items-center mt-2">
