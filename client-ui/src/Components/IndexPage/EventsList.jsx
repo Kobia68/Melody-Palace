@@ -32,7 +32,9 @@ const EventsList = () => {
   return (
     <div className="p-4">
       {events.length === 0 ? (
-        <p className="text-white bg-red-400 py-6 px-4 text-center">No events available</p>
+        <p className="text-white bg-red-400 py-6 px-4 text-center">
+          No events available
+        </p>
       ) : (
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-7 gap-6">
           {events.map((event) => (
@@ -48,13 +50,13 @@ const EventsList = () => {
                 />
               </div>
               <div className="p-4">
-                <p className="text-md font-bold">{event.event_name}</p>
+                <p className="text-md font-bold">{event.eventName}</p>
                 <p className="font-medium text-primary">
                   <span className="text-black">Host: </span>
-                  {event.host}
+                  {event.hostName}
                 </p>
                 <div className="flex justify-between items-center mt-2">
-                  <p className="text-sm">{event.event_date}</p>
+                  <p className="text-sm">{event.date}</p>
                   <p className="text-sm text-gray-500">{event.cat}</p>
                 </div>
                 <div className="flex justify-between items-center mt-2">

@@ -11,7 +11,6 @@ export const EventDetails = () => {
   // Split the url to get the id of the post
   const location = useLocation();
   const postId = location.pathname.split("/")[2];
-  console.log(postId);
 
   useEffect(() => {
     const fetchData = async () => {

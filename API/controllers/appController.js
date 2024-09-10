@@ -13,7 +13,7 @@ export const getEventDetails = (req, res) => {
     const q = "SELECT * FROM events WHERE event_id = ?";
 
     db.query(q, [req.params.id], (err, data) => {
-        if (err) return res.json(err)
-            return res.json(data[0])
+        if (err) return res.status(500).json(err)
+            return res.status(200).json(data[0])
     })
 }
