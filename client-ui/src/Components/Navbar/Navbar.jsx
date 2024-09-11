@@ -26,7 +26,7 @@ export const Navbar = () => {
       className=" border-b fixed top-0 left-0 right-0 pt-4 bg-white"
       style={{ boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)" }}
     >
-      <header className="flex justify-around">
+      <header className="flex justify-around pb-2">
         <Link
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
           to="/"
@@ -45,10 +45,12 @@ export const Navbar = () => {
               clipRule="evenodd"
             />
           </svg>
-          <span className="font-bold text-primary">Melody Palace</span>
+          <span className="font-bold text-primary hidden md:block">
+            Melody Palace
+          </span>
         </Link>
 
-        <div className="flex border border-gray-300 rounded-full py-1 px-2 shadow-md shadow-gray-200">
+        <div className="border border-gray-300 rounded-full py-1 px-2 shadow-md shadow-gray-200 hidden md:block">
           {/* INPUT SEARCH BOX */}
           <input
             type="text"
@@ -139,52 +141,53 @@ export const Navbar = () => {
 
         {/* This Link and Icons will display only if the user is signin */}
       </header>
-      <div className="text-sm flex items-center justify-center gap-3 my-3">
+      <div className="text-sm  items-center justify-center gap-3 my-3 hidden md:block text-center">
         <Link
+        to="/"
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-          className="category"
+          className="category mx-2"
         >
           All Categories
         </Link>
         <Link
           to="/?cat=concert"
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-          className="category"
+          className="category mx-2"
         >
           Concerts
         </Link>
         <Link
           to="/?cat=comedy"
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-          className="category"
+          className="category mx-2"
         >
           Comedy
         </Link>
         <Link
           to="/?cat=art"
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-          className="category"
+          className="category mx-2"
         >
           Art
         </Link>
         <Link
           to="/?cat=product launch"
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-          className="category"
+          className="category mx-2"
         >
           Product Launch
         </Link>
         <Link
           to="/?cat=talent show"
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-          className="category"
+          className="category mx-2"
         >
           Talent Shows
         </Link>
         <Link
           to="/?cat=other"
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-          className="category"
+          className="category mx-2"
         >
           Other
         </Link>

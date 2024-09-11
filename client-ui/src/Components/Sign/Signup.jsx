@@ -34,7 +34,7 @@ export const SignUp = () => {
   };
 
   return (
-    <div className="-mt-8 grow flex items-center justify-around min-h-screen">
+    <div className="-mt-8 grow flex items-center justify-around min-h-screen px-6">
       <div className="">
         <form onSubmit={handleSubmit} className="max-w-sm mx-auto text-center">
           <h2 className="text-primary font-bold text-2xl">SIGN UP</h2>

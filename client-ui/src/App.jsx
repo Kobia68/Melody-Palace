@@ -18,7 +18,6 @@ import { NewEvent } from "./Components/AdminPages/NewEvent";
 import { Finances } from "./Components/AdminPages/Finances";
 
 function App() {
-  const [count, setCount] = useState(0);
 
   return (
     <Routes>

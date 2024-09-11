@@ -33,7 +33,7 @@ export const SignIn = () => {
   };
 
   return (
-    <div className="-mt-16 grow flex items-center justify-around min-h-screen">
+    <div className="-mt-16 grow flex items-center justify-around min-h-screen px-6">
       <div className="">
         <form
           action=""

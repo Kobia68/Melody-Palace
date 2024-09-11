@@ -25,13 +25,13 @@ export const EventDetails = () => {
   }, [postId]);
 
   // Calculate subtotal for each ticket type
-  const regularSubtotal = regularQty * event.regular_price;
-  const vipSubtotal = vipQty * event.vip_price;
-  const vvipSubtotal = vvipQty * event.vvip_price;
+  const regularSubtotal = regularQty * event.regularTicket;
+  const vipSubtotal = vipQty * event.vipTicket;
+  const vvipSubtotal = vvipQty * event.vvipTicket;
   const total = regularSubtotal + vipSubtotal + vvipSubtotal;
 
   return (
-    <div className="w-2/3 mx-auto mt-24 shadow-[0_4px_10px_rgba(0,0,0,0.45)] p-3 rounded-md">
+    <div className="mx-auto mt-16 md:mt-24 md:w-2/3 shadow-[0_4px_10px_rgba(0,0,0,0.45)] p-3 rounded-md">
       <div className="flex justify-between">
         <div className="bg-gray-400 w-1/2 rounded-md h-96 p-2">
           <img
@@ -42,19 +42,19 @@ export const EventDetails = () => {
         </div>
         <div className="w-1/2 pl-10 p-10">
           <p className="text-sm">{event.cat}</p>
-          <h2 className="text-xl font-bold">{event.event_name}</h2>
-          <p>{event.description}</p>
+          <h2 className="text-xl font-bold">{event.eventName}</h2>
+          <p>{event.eventDescription}</p>
           <p>
             Host:
             <span className="text-primary font-semibold text-lg">
-              {event.host}
+              {event.hostName}
             </span>
           </p>
           <p>
-            Date: <span className="font-semibold">{event.event_date}</span>
+            Date: <span className="font-semibold">{event.eventDate}</span>
           </p>
           <p>
-            From: <span className="font-semibold">{event.event_time}</span>
+            From: <span className="font-semibold">{event.eventTime}</span>
           </p>
         </div>
       </div>
@@ -79,7 +79,7 @@ export const EventDetails = () => {
           <tbody>
             <tr className="odd:bg-gray-200 even:bg-white">
               <td className="px-4 py-2">Regular</td>
-              <td className="px-4 py-2">{event.regular_price}</td>
+              <td className="px-4 py-2">{event.regularTicket}</td>
               <td className="px-4 py-2">
                 <select
                   name="ticketNumber"
@@ -98,42 +98,47 @@ export const EventDetails = () => {
             </tr>
             <tr className="odd:bg-gray-200 even:bg-white">
               <td className="px-4 py-2">VIP</td>
-              <td className="px-4 py-2">{event.vip_price}</td>
+              <td className="px-4 py-2">{event.vipTicket}</td>
               <td className="px-4 py-2">
-                <select
-                  name="ticketNumber"
-                  className="border border-gray-400 rounded p-1"
-                  value={vipQty}
-                  onChange={(e) => setVipQty(Number(e.target.value))}
-                >
-                  {[...Array(11).keys()].map((num) => (
-                    <option key={num} value={num}>
-                      {num}
-                    </option>
-                  ))}
-                </select>
+                {event.vipTicket && (
+                  <select
+                    name="ticketNumber"
+                    className="border border-gray-400 rounded p-1"
+                    value={vipQty}
+                    onChange={(e) => setVipQty(Number(e.target.value))}
+                  >
+                    {[...Array(11).keys()].map((num) => (
+                      <option key={num} value={num}>
+                        {num}
+                      </option>
+                    ))}
+                  </select>
+                )}
               </td>
               <td className="px-4 py-2">{vipSubtotal}</td>
             </tr>
             <tr className="odd:bg-gray-200 even:bg-white">
               <td className="px-4 py-2">VVIP</td>
-              <td className="px-4 py-2">{event.vvip_price}</td>
+              <td className="px-4 py-2">{event.vvipTicket}</td>
               <td className="px-4 py-2">
-                <select
-                  name="ticketNumber"
-                  className="border border-gray-400 rounded p-1"
-                  value={vvipQty}
-                  onChange={(e) => setVvipQty(Number(e.target.value))}
-                >
-                  {[...Array(11).keys()].map((num) => (
-                    <option key={num} value={num}>
-                      {num}
-                    </option>
-                  ))}
-                </select>
+                {event.vvipTicket && (
+                  <select
+                    name="ticketNumber"
+                    className="border border-gray-400 rounded p-1"
+                    value={vvipQty}
+                    onChange={(e) => setVvipQty(Number(e.target.value))}
+                  >
+                    {[...Array(11).keys()].map((num) => (
+                      <option key={num} value={num}>
+                        {num}
+                      </option>
+                    ))}
+                  </select>
+                )}
               </td>
               <td className="px-4 py-2">{vvipSubtotal}</td>
             </tr>
+
             {/* Total Row */}
             <tr className="bg-gray-800 text-white">
               <td className="px-4 py-2" colSpan="3">

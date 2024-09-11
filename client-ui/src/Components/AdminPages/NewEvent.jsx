@@ -92,7 +92,6 @@ export const NewEvent = () => {
 
         <div>
           <label
-            htmlFor="eventDescription"
             className="block text-xs font-medium text-gray-700"
           >
             Event Description
@@ -108,7 +107,6 @@ export const NewEvent = () => {
 
         <div>
           <label
-            htmlFor="hostName"
             className="block text-xs font-medium text-gray-700"
           >
             Host Name
@@ -124,7 +122,6 @@ export const NewEvent = () => {
 
         <div>
           <label
-            htmlFor="eventDate"
             className="block text-xs font-medium text-gray-700"
           >
             Event Date
@@ -141,7 +138,6 @@ export const NewEvent = () => {
 
         <div>
           <label
-            htmlFor="eventTime"
             className="block text-xs font-medium text-gray-700"
           >
             Event Time
@@ -157,7 +153,6 @@ export const NewEvent = () => {
 
         <div>
           <label
-            htmlFor="posterImg"
             className="block text-xs font-medium text-gray-700"
           >
             Poster image
@@ -174,7 +169,6 @@ export const NewEvent = () => {
 
         <div>
           <label
-            htmlFor="ticketPrices"
             className="block text-xs font-medium text-gray-700"
           >
             Ticket Prices
@@ -184,7 +178,6 @@ export const NewEvent = () => {
           </p>
           <div className="flex gap-2 align-middle">
             <label
-              htmlFor="refulartickets"
               className="text-xs font-medium text-gray-700 mt-2 w-20"
             >
               Regular
@@ -201,7 +194,6 @@ export const NewEvent = () => {
           </div>
           <div className="flex gap-2 align-middle">
             <label
-              htmlFor="refulartickets"
               className="text-xs font-medium text-gray-700 mt-2 w-20"
             >
               VIP
@@ -218,7 +210,6 @@ export const NewEvent = () => {
           </div>
           <div className="flex gap-2 align-middle">
             <label
-              htmlFor="refulartickets"
               className="text-xs font-medium text-gray-700 mt-2 w-20"
             >
               VVIP

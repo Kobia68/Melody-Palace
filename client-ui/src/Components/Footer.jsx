@@ -13,8 +13,8 @@ export const Footer = () => {
 
   return (
     <div>
-      <div className="bg-gray-300 flex justify-around py-6 mt-5">
-        <Link to="/" onClick={scrollToTop}>
+      <div className="bg-gray-300 flex flex-col items-start md:flex md:flex-row md:justify-around py-6 mt-5">
+        <Link to="/" onClick={scrollToTop} className="ml-5">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
@@ -29,7 +29,7 @@ export const Footer = () => {
           </svg>
           <p>Melody Palace</p>
         </Link>
-        <div>
+        <div className="ml-5">
           <p className="underline">Quick Links</p>
           <Link
             className="text-sm text-gray-700 hover:text-primary"
@@ -62,7 +62,7 @@ export const Footer = () => {
             <p className="my-1">Terms & Conditions</p>
           </Link>
         </div>
-        <div>
+        <div className="ml-5">
           <p className="underline text-sm">Connect with us</p>
           <Link
             className="text-sm text-gray-700 hover:text-primary"

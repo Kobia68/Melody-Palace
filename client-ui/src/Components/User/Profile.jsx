@@ -1,6 +1,6 @@
-import React, { useContext } from 'react'
-import { Link } from 'react-router-dom'
-import { AuthContext } from '../../context/authContext';
+import React, { useContext } from "react";
+import { Link } from "react-router-dom";
+import { AuthContext } from "../../context/authContext";
 
 export const Profile = () => {
   const { currentUser } = useContext(AuthContext);
@@ -8,7 +8,7 @@ export const Profile = () => {
   return (
     <div className="w-2/3 mt-5 mx-auto flex flex-row">
       <div className="w-full mt-10">
-        <div className="flex mt-10 w-2/3 mx-auto gap-4">
+        <div className="flex mt-10 md:w-2/3 mx-auto gap-4">
           <label htmlFor="" className="font-semibold w-32">
             Name:
           </label>
@@ -16,7 +16,7 @@ export const Profile = () => {
             {currentUser?.fullname}
           </p>
         </div>
-        <div className="flex mt-10 w-2/3 mx-auto gap-4">
+        <div className="flex mt-10  md:w-2/3 mx-auto gap-4">
           <label htmlFor="" className="font-semibold w-32">
             Email:
           </label>
@@ -24,7 +24,7 @@ export const Profile = () => {
             {currentUser?.email}
           </p>
         </div>
-        <div className="flex mt-10 w-2/3 mx-auto gap-4">
+        <div className="flex mt-10  md:w-2/3 mx-auto gap-4">
           <label htmlFor="" className="font-semibold w-32">
             username
           </label>
@@ -32,7 +32,7 @@ export const Profile = () => {
             {currentUser?.username}
           </p>
         </div>
-        <div className="flex mt-10 w-2/3 mx-auto gap-4">
+        <div className="flex mt-10  md:w-2/3 mx-auto gap-4">
           <label htmlFor="" className="font-semibold w-32">
             PhoneNo:
           </label>
@@ -43,4 +43,4 @@ export const Profile = () => {
       </div>
     </div>
   );
-}
+};
